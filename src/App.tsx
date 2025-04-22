@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import QuoteBox from './components/QuoteBox';
 import './App.css';
 
@@ -43,7 +43,7 @@ const App: React.FC = () => {
       
       {!started ? (
         <div className="start-screen">
-          <button onClick={handleStart}>Start</button>
+          <button className='start' onClick={handleStart}>Start</button>
         </div>
       ) : (
         <>
