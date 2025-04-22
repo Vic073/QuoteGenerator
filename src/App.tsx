@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
   const fetchQuote = async () => {
     try {
-      const res = await fetch('https://api.quotable.io/random');
+      const res = await fetch('https://zenquotes.io/api/random');
       const data = await res.json();
       setQuote(data.content);
       setAuthor(data.author);
