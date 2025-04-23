@@ -55,23 +55,18 @@ const App: React.FC = () => {
     <div className={`app-container ${bgClasses[bgIndex]}`}>
       {!started ? (
         <div className="start-screen">
-          <button className="start" onClick={handleStart}>
+          <button onClick={handleStart}>
             Start
           </button>
         </div>
       ) : (
-        <div className="quote-container">
-          {loading ? (
-            <p>Loading quote...</p>
-          ) : error ? (
-            <div>
-              <p>{error}</p>
-              <button onClick={fetchQuote}>Retry</button>
-            </div>
-          ) : (
-            <QuoteBox quote={quote} author={author} onNewQuote={fetchQuote} />
-          )}
-        </div>
+      
+            <>
+          
+          <QuoteBox quote={quote} author={author} onNewQuote={fetchQuote} />
+          
+        </>
+    
       )}
     </div>
   );
